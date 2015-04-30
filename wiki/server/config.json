@@ -1,0 +1,8 @@
+{
+	"dbName": "wiki",
+	"dbUser": "wiki",
+	"dbPwd": "wiki",
+	"dbPort": 27017,
+	"serverPort": 3000,
+	"host": "127.0.0.1"
+}

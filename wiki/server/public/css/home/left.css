@@ -1,0 +1,23 @@
+
+.home_left{
+	position:absolute;
+	left:55px;
+	top:0;
+	bottom:0;
+	width:300px;
+	background-color:#F2F2F2;
+	border-right:1px solid #ddd;
+}
+
+.home_left_controller{
+	position:absolute;
+	left:356px;
+	height:55px;
+	background-color:#0000FF;
+	width:20px;
+	color:#FFF;
+	text-align:center;
+	line-height:55px;
+	top:45%;
+	cursor:pointer;
+}
