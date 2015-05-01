@@ -26,18 +26,12 @@ header span{
 	color: ;
 }
 
-header span:hover{
-	background-color:#0000FF;
-	color: #fff;
-}
 
 header span:nth-child(1){
 	margin-top:20px;
 }
 
-.menu_selected{
-	color:#fff;
-}
+
 
 .mcenter{
 	margin-left:auto;
@@ -46,6 +40,39 @@ header span:nth-child(1){
 
 .fl{
 	float: left;
+}
+
+a{
+	text-decoration:none;
+}
+
+a:hover{
+	color:#ccc;
+}
+a:visited{
+	color:#ccc;;
+}
+
+a:active{
+	color:#ccc;
+}
+
+.menu_selected{
+	background-color:#0000FF;
+}
+
+.menu_selected a{
+	color:#fff;
+}
+
+header span a{
+	display: block;
+	width:55px;
+}
+
+header span:hover{
+	background-color:#0000FF;
+	color: #fff;
 }
 
 

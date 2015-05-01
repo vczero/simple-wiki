@@ -6,7 +6,7 @@ require.config({
     }
 });
  
-require(['list/index'], function(left) {
+require(['common/left'], function(left) {
  	
     
 });

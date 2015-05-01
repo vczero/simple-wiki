@@ -14,7 +14,7 @@ define(['jquery'], function($){
 			leftPanel.animate({width: 'toggle'}, TIME);
 			control.animate({left: '55px'}, TIME);
 			container.animate({left: '55px'}, TIME);
-			right.animate({width: 'toggle'}, TIME);
+			right && right.animate({width: 'toggle'}, TIME);
 		},
 		function(){
 			control.empty();
@@ -22,7 +22,7 @@ define(['jquery'], function($){
 			leftPanel.animate({width:'toggle'}, TIME);
 			control.animate({left:'356px'}, TIME);
 			container.animate({left:'356px'}, TIME);
-			right.animate({width: 'toggle'}, TIME);
+			right && right.animate({width: 'toggle'}, TIME);
 		}
 	);
 });

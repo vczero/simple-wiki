@@ -6,7 +6,7 @@ require.config({
     }
 });
  
-require(['home/left'], function(left) {
+require(['common/left'], function(left) {
  	
     
 });
