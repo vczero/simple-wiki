@@ -5,8 +5,8 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
+var home = require('./routes/index');
+var list = require('./routes/list');
 
 var app = express();
 
@@ -24,8 +24,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', routes);
-app.use('/users', users);
+app.use('/', home);
+app.use('/list', list);
 
 
 //404处理
@@ -55,6 +55,23 @@ app.use(function(err, req, res, next) {
    		 message: err.message,
     		error: {}
   	});
+});
+
+var markdown = require('markdown').markdown;
+var fs = require('fs');
+fs.readFile('./1.md', function(err, data){
+	if(!err){
+		data = data.toString();
+		console.log(data);
+		console.log('--------');
+		var md = markdown.toHTML(data);
+		fs.writeFile('./test.html', md, function(err){
+			if(!err){
+				console.log('--ok-');
+			}
+		});
+		console.log(md);
+	}
 });
 
 

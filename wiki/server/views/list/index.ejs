@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>wiki</title>
+	<link type="text/css" href="css/common/base.css" rel="stylesheet"/>
+	<link type="text/css" href="css/home/left.css" rel="stylesheet"/>
+	<link type="text/css" href="css/home/container.css" rel="stylesheet"/>
+	</head>
+<body>
+	<!--header-->
+   	<% include ../common/header %>
+   	<!--left-->
+   	<% include left %>
+   	
+   	<section id="home_container" class="home_container_div">
+   		<div style="margin-left:60px;">
+   			<% include ../blog/blog_1.ejs %>
+   		</div>
+   	</section>
+   
+   	<script data-main="lib/list" src="js/require.js" defer async="true"></script>
+</body>
+</html>

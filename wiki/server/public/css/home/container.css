@@ -52,6 +52,7 @@
 .home_pages_page>div:nth-child(1){
 	font-size:19px;
 	font-weight:bold;
+	cursor:pointer;
 }
 
 .home_pages_page>div:nth-child(2){
@@ -88,7 +89,9 @@
 	text-align:center;
 }
 
-
+.home_pages_hr{
+	border-top:1px dashed #D9D9D9;width:100%;margin-bottom:25px;
+}
 
 
 
