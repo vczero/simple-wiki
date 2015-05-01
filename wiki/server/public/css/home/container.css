@@ -1,0 +1,99 @@
+.home_container_div{
+	position:absolute;
+	left:356px;
+	top:0;
+	bottom:0;
+	right:0;
+	background-color:#FFF;
+	overflow-y:overlay;
+}
+
+.home_pages_list{
+	 width:750px;
+	 min-height:100px;
+	 overflow-y:overlay;
+	 margin-left:50px; 
+}
+
+.home_pages_tip{
+	color:#000;
+	font-size:12px;
+}
+
+.home_pages_tip_hr{
+	height:15px;
+}
+
+.home_pages_tip_hr div{
+	height:1px;
+}
+
+.home_pages_tip>div:nth-child(1){
+	margin-top:20px;
+	margin-bottom:10px;
+}
+
+.home_pages_tip_hr div:nth-child(1){
+	width:55px;
+	border-top:2px solid #00B3EA;
+	height:1px;
+}
+
+.home_pages_tip_hr div:nth-child(2){
+	width:745px;
+	border-top:1px solid #ccc;
+	height:1px;
+}
+
+.home_pages_page{
+	margin-bottom:8px;
+	margin-top:8px;
+}
+.home_pages_page>div:nth-child(1){
+	font-size:19px;
+	font-weight:bold;
+}
+
+.home_pages_page>div:nth-child(2){
+	margin-top:5px;
+	color:#9999A2;
+	line-height:20px;
+}
+
+.home_pages_page>div:nth-child(3)>span{
+	margin-top:5px;
+	color:#4094C7;
+}
+
+.home_photo_list{
+	position:fixed;
+	right:0;
+	width:280px;
+	top:0;
+	bottom:0;
+	display: none;
+}
+.home_photo_list div{
+	margin-top:-2px;
+	box-shadow: 2px 2px 2px 2px #ccc;
+}
+
+.home_photo_list div img{
+	width:280px;
+	height:200px;
+}
+
+.home_photo_list div P{
+	margin-top:4px;
+	text-align:center;
+}
+
+
+
+
+
+
+
+
+
+

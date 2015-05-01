@@ -1,18 +1,19 @@
 body{
 	margin:0;
 	padding:0;
-	font-family: "Times New Roman","courier new", Arial,Helvetica, Helvetica;	
+	font-size:13px;
+	color:#555555;
+	font-family: "times new roman","lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
 
 header{
 	width:55px;
 	height:100%;
-	background-color:#08324A;
+	background-color:#2A2A2A;
 	position:fixed;
 	top:0;
 	bottom:0;
 	left:0;
-	font-size:13px;
 }
 
 header span{
@@ -38,5 +39,13 @@ header span:nth-child(1){
 	color:#fff;
 }
 
+.mcenter{
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.fl{
+	float: left;
+}
 
 

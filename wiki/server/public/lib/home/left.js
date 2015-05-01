@@ -2,19 +2,27 @@
 define(['jquery'], function($){
 	var leftPanel = $('#home_left_panel');
 	var control = $('#home_left_control');
-
+	var container = $('#home_container');
+	var right = $('.home_photo_list');
+	var TIME = 266;
+	
+	
 	control.toggle(
 		function(){
 			control.empty();
-			control.append('-');
-			leftPanel.animate({width:'toggle'}, 400);
-			control.animate({left:'55px'}, 400);
+			control.append('+');
+			leftPanel.animate({width: 'toggle'}, TIME);
+			control.animate({left: '55px'}, TIME);
+			container.animate({left: '55px'}, TIME);
+			right.animate({width: 'toggle'}, TIME);
 		},
 		function(){
 			control.empty();
-			control.append('+');
-			leftPanel.animate({width:'toggle'}, 400);
-			control.animate({left:'356px'}, 400);
+			control.append('<div class="home_left_del"></div>');
+			leftPanel.animate({width:'toggle'}, TIME);
+			control.animate({left:'356px'}, TIME);
+			container.animate({left:'356px'}, TIME);
+			right.animate({width: 'toggle'}, TIME);
 		}
 	);
 });
