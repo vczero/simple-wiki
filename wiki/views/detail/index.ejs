@@ -6,13 +6,13 @@
 	<link type="text/css" href="css/common/base.css" rel="stylesheet"/>
 	<link type="text/css" href="css/common/left.css" rel="stylesheet"/>
 	<link type="text/css" href="css/home/container.css" rel="stylesheet"/>
+	<link type="text/css" href="css/detail/comment.css" rel="stylesheet"/>
 	</head>
 <body>
 	<!--header-->
    	<% include ../common/header %>
    	<!--left-->
    	<% include ../common/left %>
-   	
    	<section id="home_container" class="home_container_div">
    		<div style="margin-left:60px;">
    			<% include ../blog/blog_1.ejs %>
@@ -20,8 +20,9 @@
    		<div style="margin-left:60px;margin-top:20px;">
    			－－by vczero 专注web研发，前端框架和架构，做一个优秀的前端工程师
    		</div>
+   		<% include ./comment %>
    	</section>
    
-   	<script data-main="lib/list" src="js/require.js" defer async="true"></script>
+   	<script data-main="lib/detail" src="js/require.js" defer async="true"></script>
 </body>
 </html>

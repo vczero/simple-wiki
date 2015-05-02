@@ -42,6 +42,10 @@ header span:nth-child(1){
 	float: left;
 }
 
+.fr{
+	float:right;
+}
+
 a{
 	text-decoration:none;
 }
@@ -66,6 +70,7 @@ a:active{
 }
 
 header span a{
+	color:#CCC;
 	display: block;
 	width:55px;
 }

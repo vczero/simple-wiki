@@ -1,4 +1,5 @@
 
+
 module.exports = function(req, res, next){
-	res.render('home/index', {});
+	res.render('detail/index', {});
 };

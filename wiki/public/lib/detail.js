@@ -7,5 +7,5 @@ require.config({
 });
  
 require(['common/left', 'common/header'], function(left, header) {
- 	header.addSelected(0);
+ 	header.addSelected(2);
 });

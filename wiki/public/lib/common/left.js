@@ -6,7 +6,6 @@ define(['jquery'], function($){
 	var right = $('.home_photo_list');
 	var TIME = 266;
 	
-	
 	control.toggle(
 		function(){
 			control.empty();

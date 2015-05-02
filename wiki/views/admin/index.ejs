@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>wiki</title>
+	<link type="text/css" href="css/common/base.css" rel="stylesheet"/>
+	<link type="text/css" href="css/common/left.css" rel="stylesheet"/>
+	<link type="text/css" href="css/home/container.css" rel="stylesheet"/>
+	<link type="text/css" href="css/admin/login.css" rel="stylesheet"/>
+	</head>
+<body>
+	<!--header-->
+   	<% include ../common/header %>
+   	<!--left-->
+   	<% include ../common/left %>
+   	<section id="home_container" class="home_container_div">
+   		<!--<div style="margin-left:60px;">
+   			<% include ./login %>
+   		</div>-->
+   		<link type="text/css" href="css/admin/article.css" rel="stylesheet"/>
+   		<link type="text/css" href="css/admin/uploader.css" rel="stylesheet"/>
+   		<div style="margin-left:60px;margin-top:40px;">
+   			<% include ./article %>
+   		</div>
+   	</section>
+   	<script data-main="lib/admin" src="js/require.js" defer async="true"></script>
+</body>
+</html>

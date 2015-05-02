@@ -1,0 +1,31 @@
+
+<div class="detail_comment">
+	<div class="detail_comment_title">评论</div>
+	<div class="detail_comment_hr">
+		<div class="fl"></div>
+		<div class="fl"></div>
+	</div>
+	
+	<div class="detail_comment_textarea">
+		<div>
+			用户名： <input type="text"/>
+			(乐于分享和开源是程序员的本质，请留下你的大名，比如：github账号、微博、博客等)
+		</div>
+		<div>
+			<textarea maxlength="400"></textarea>
+		</div>
+		<div class="detail_comment_submit">
+			<div class="fr">提交</div>
+		</div>
+		<%for(var i = 0; i < 100; i++){%>
+		<div class="detail_comment_item">
+			<div>写的不错，学习了</div>
+			<div>
+				<span>弯弯的小河</span>
+				<span>2015-05-02 14:51</span>
+			</div>
+			<div class="detail_comment_count"><%=i+1%></div>
+		</div>
+		<%}%>
+	</div>
+</div>

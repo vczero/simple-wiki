@@ -1,16 +1,16 @@
 var express = require('express');
+var http = require('http');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var home = require('./routes/index');
-var list = require('./routes/list');
-
+var config = require('./config');
 var app = express();
+var port = config.serverPort || 3000;
 
-
+app.set('port', port);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.set("view options",{                                                                                          
@@ -24,10 +24,48 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', home);
-app.use('/list', list);
+var server = http.createServer(app);
+server.listen(port);
+server.on('listening', function(){
+	console.log('---------listening on: ' + port + '--------');
+});
 
 
+server.on('error', function(error){
+	if (error.syscall !== 'listen'){
+		throw error;
+  	}
+	switch(error.code){
+    		case 'EACCES':
+    			console.error(bind + ' requires elevated privileges');
+      		process.exit(1);
+     		break;
+    		case 'EADDRINUSE':
+      		console.error(bind + ' is already in use');
+      		process.exit(1);
+      	break;
+    		default:
+      		throw error;
+  	}
+});
+
+
+
+/*---------------------------路由-------------------------------------*/
+var home = require('./routes/index');
+var detail = require('./routes/detail');
+var admin = require('./routes/admin');
+var uploadImg = require('./routes/upload_img');
+var uploadMd = require('./routes/upload_md');
+
+app.get('/', home);
+app.get('/detail', detail);
+app.get('/admin', admin);
+app.post('/upload/img', uploadImg);
+app.post('/upload/md', uploadMd);
+
+
+/*--------------------------中间件-------------------------------------*/
 //404处理
 app.use(function(req, res, next) {
 	var err = new Error('Not Found');
@@ -36,9 +74,8 @@ app.use(function(req, res, next) {
 });
 
 
-
 //开发模式的错误异常处理
-if (app.get('env') === 'development') {
+if(app.get('env') === 'development') {
 	app.use(function(err, req, res, next) {
 		res.status(err.status || 500);
     		res.render('common/404', {
@@ -57,22 +94,6 @@ app.use(function(err, req, res, next) {
   	});
 });
 
-var markdown = require('markdown').markdown;
-var fs = require('fs');
-fs.readFile('./1.md', function(err, data){
-	if(!err){
-		data = data.toString();
-		console.log(data);
-		console.log('--------');
-		var md = markdown.toHTML(data);
-		fs.writeFile('./test.html', md, function(err){
-			if(!err){
-				console.log('--ok-');
-			}
-		});
-		console.log(md);
-	}
-});
 
 
-module.exports = app;
+
