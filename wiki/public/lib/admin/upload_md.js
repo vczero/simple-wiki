@@ -7,7 +7,12 @@ define(['jquery', 'uploader'], function($, WebUploader){
         resize: false,
         swf: '../js/Uploader.swf',
         server: '/upload/md',
-        pick: '#picker'
+        pick: '#picker',
+        accept: {
+            title: 'Markdown',
+            extensions: 'md',
+            mimeTypes: 'text/markdown'
+        }
     });
 
     uploader.on('fileQueued', function(file){
@@ -60,13 +65,12 @@ define(['jquery', 'uploader'], function($, WebUploader){
     });
 
     btn.on('click', function(){
-    		var title = $('#admin_title');
-    		var author = $('#admin_author');
-    		var type = $('#admin_type');
-    		var tags = $('#admin_tags');
-    		var introdu = $('#admin_introdu');
-    		
-    		if(title.val() && author.val() && type.val() && tags.val() && introdu.val()){
+    		var title = $('#admin_title').val();
+    		var author = $('#admin_author').val();
+    		var type = $('#admin_type').val();
+    		var tags = $('#admin_tags').val();
+    		var introdu = $('#admin_introdu').val();
+    		if(title && author && type && tags && introdu){
     			if (state === 'uploading') {
 	            uploader.stop();
 	        } else {
@@ -75,6 +79,19 @@ define(['jquery', 'uploader'], function($, WebUploader){
     		}else{
     			alert('请填写完整的表单');
     		}
+    });
+    
+    uploader.on('uploadBeforeSend', function(object, data, headers){
+    		var title = $('#admin_title').val();
+    		var author = $('#admin_author').val();
+    		var articleType = $('#admin_type').val();
+    		var tags = $('#admin_tags').val();
+    		var introdu = $('#admin_introdu').val();
+    		data.title = title;
+    		data.author = author;
+    		data.articleType = articleType;
+    		data.tags = tags;
+    		data.introdu = introdu;
     });
     
 });
