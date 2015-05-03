@@ -4,7 +4,7 @@ var admin = require('./admin');
 var uploadImg = require('./upload_img');
 var uploadMd = require('./upload_md');
 var login = require('./login');
-
+var comment = require('./comment');
 
 
 
@@ -20,7 +20,7 @@ module.exports = function(app){
 	app.post('/upload/img', uploadImg);
 	app.post('/upload/md', uploadMd);
 	app.post('/user/login', login);
-	
+	app.post('/comment', comment);
 	
 	/*中间件*/
 	//404

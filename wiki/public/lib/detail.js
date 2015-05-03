@@ -6,6 +6,6 @@ require.config({
     }
 });
  
-require(['common/left', 'common/header', 'jquery', 'detail/article'], function(left, header, $) {
- 	header.addSelected(2);
+require(['common/left', 'jquery', 'detail/article'], function(left, $) {
+ 	
 });
