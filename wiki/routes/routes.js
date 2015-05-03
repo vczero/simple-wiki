@@ -3,6 +3,7 @@ var detail = require('./detail');
 var admin = require('./admin');
 var uploadImg = require('./upload_img');
 var uploadMd = require('./upload_md');
+var login = require('./login');
 
 
 
@@ -18,6 +19,7 @@ module.exports = function(app){
 	/*服务接口层*/
 	app.post('/upload/img', uploadImg);
 	app.post('/upload/md', uploadMd);
+	app.post('/user/login', login);
 	
 	
 	/*中间件*/

@@ -44,5 +44,7 @@
 .loginDiv div:hover{
 	background-color:#34DDEE;
 }
-
+.admin_login_left{
+	margin-left:60px;
+}
 

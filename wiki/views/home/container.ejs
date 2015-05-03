@@ -8,22 +8,22 @@
 	 			<div></div>
 	 		</div>
 	 	</div>
-	 	<%for(var i = 0; i < 10; i++){%>
-	 	 <div class="home_pages_page">
-	 	 	<div>致即将毕业的你</div>
-	 	 	<div>
-	 	 		公司新招聘的设计助理最近在朋友圈发了毕业设计任务完成进度计划，准确来说是被完成。
-	 	 		表弟也有咨询我应届生就业，以及实习等事宜。 我是2012年7月1日正式毕业，2011年10
-	 	 		月15日我二十周岁生日这天来到上海实习，算来至今也有三个多年头了。
-	 	 	</div>
-	 	 	<div>
-	 	 		<span>vczero</span>
-	 	 		<span>加油， 努力.</span>
-	 	 		<span>2015-05-01 16:52</span>
-	 	 	</div>
-	 	 </div>
-	 	 <div class="home_pages_hr"></div>
-	 	 <%}%>
+	 	<% for(var i = 0; i < pages.length; i++){ %>
+		 	 <div class="home_pages_page">
+		 	 	<div>
+		 	 		<a href="/detail?id=<%=pages[i].id%>"><%=pages[i].title%></a>
+		 	 	</div>
+		 	 	<div>
+		 	 		<%=pages[i].introdu%>
+		 	 	</div>
+		 	 	<div>
+		 	 		<span><%=pages[i].author%></span>
+		 	 		<span><%=pages[i].tags%></span>
+		 	 		<span><%=pages[i].time%></span>
+		 	 	</div>
+		 	 </div>
+		 	 <div class="home_pages_hr"></div>
+	 	 <% } %>
 	 </div>
 	 <div class="home_photo_list">
 	  	<%for(var i = 1; i < 4; i++){%>
