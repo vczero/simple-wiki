@@ -32,7 +32,6 @@ define(['jquery', 'uploader'], function($, WebUploader){
         }, width, height);
     });
 
-    // 文件上传过程中创建进度条实时显示。
     uploader.on('uploadProgress', function(file, percentage) {
         var li = $('#' + file.id);
         var percent = li.find('.progress span');
@@ -43,12 +42,10 @@ define(['jquery', 'uploader'], function($, WebUploader){
         percent.css('width', percentage * 100 + '%');
     });
 
-    // 文件上传成功，给item添加成功class, 用样式标记上传成功。
-    uploader.on( 'uploadSuccess', function(file) {
+    uploader.on('uploadSuccess', function(file) {
         $('#'+file.id ).addClass('upload-state-done');
     });
 
-    // 文件上传失败，现实上传出错。
     uploader.on('uploadError', function(file) {
         var li = $('#'+file.id );
         var error = li.find('div.error');
@@ -60,8 +57,17 @@ define(['jquery', 'uploader'], function($, WebUploader){
         error.text('上传失败');
     });
 
-    //完成上传完了，成功或者失败，先删除进度条。
-    uploader.on( 'uploadComplete', function(file) {
+    uploader.on('uploadComplete', function(file) {
         $('#'+file.id).find('.progress').remove();
+    });
+    
+    uploader.on('uploadAccept', function(obj, ret){
+    		if(ret.status){
+    			var info = $('#' + obj.cuted.file.id + ' .info');
+    			var str = '<a target="_blank" href="' + ret.path + '">' + ret.path + '</a>'
+    			info.empty();
+    			info.append(str);
+    		}
+    		console.log(ret);
     });
 });

@@ -60,11 +60,21 @@ define(['jquery', 'uploader'], function($, WebUploader){
     });
 
     btn.on('click', function(){
-        if (state === 'uploading') {
-            uploader.stop();
-        } else {
-            uploader.upload();
-        }
+    		var title = $('#admin_title');
+    		var author = $('#admin_author');
+    		var type = $('#admin_type');
+    		var tags = $('#admin_tags');
+    		var introdu = $('#admin_introdu');
+    		
+    		if(title.val() && author.val() && type.val() && tags.val() && introdu.val()){
+    			if (state === 'uploading') {
+	            uploader.stop();
+	        } else {
+	            uploader.upload();
+	        }
+    		}else{
+    			alert('请填写完整的表单');
+    		}
     });
     
 });

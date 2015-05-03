@@ -1,5 +1,6 @@
 
 
 module.exports = function(req, res, next){
-	res.render('detail/index', {});
+	var name = req.param('name');
+	res.render('detail/index', {blogName: name});
 };

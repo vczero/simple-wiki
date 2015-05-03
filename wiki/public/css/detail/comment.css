@@ -106,7 +106,12 @@
 }
 
 
-
+pre{
+	border:1px solid #D9D9D9;width:800px;
+	padding: 10px;
+	border-radius:4px;
+	background-color:#F7F7F7;
+}
 
 
 
