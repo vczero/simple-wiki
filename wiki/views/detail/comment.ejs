@@ -17,16 +17,11 @@
 		<div class="detail_comment_submit">
 			<div id="commentBtn" class="fr">提交</div>
 		</div>
-		<%for(var i = 0; i < comments.length; i++){%>
-		<div class="detail_comment_item">
-			<div><%=comments[i].comment%></div>
-			<div>
-				<span><%=comments[i].username%>&nbsp;</span>
-				<span><%=comments[i].time%></span>
-			</div>
-			<div class="detail_comment_count"><%=comments.length - i%></div>
+		
+		<div id="comments_div">
+			<!--doAjax-->
 		</div>
-		<%}%>
+		
 	</div>
 	<!--footer-->
    	 <% include ../common/footer %>

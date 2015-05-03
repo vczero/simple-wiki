@@ -36,6 +36,7 @@ module.exports = function(req, res, next){
 					//创建文章
 					var articleObj = {};
 					articleObj[newName] = md;
+					articleObj.comments = [];
 					try{
 						var mainJSON = JSON.parse(fs.readFileSync(MD_DIR + 'main.json').toString());
 						mainJSON.splice(0, 0, introObj);
