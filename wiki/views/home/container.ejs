@@ -28,8 +28,8 @@
 	 <div class="home_photo_list">
 	  	<%for(var i = 0; i < picpages.length; i++){%>
 	  	<div>
-			<a href=""><img src="<%=picpages[i].picurl%>"/><a>
-			<p><%=picpages[i].title%></p>
+			<a style="color:#000;" href="/detail?id=<%=picpages[i].id%>"><img src="<%=picpages[i].picurl%>"/></a>
+			<a style="color:#000;" href="/detail?id=<%=picpages[i].id%>"><p><%=picpages[i].title%></p></a>
 		</div>
 		<%}%>
 	 </div>
