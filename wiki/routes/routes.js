@@ -9,6 +9,7 @@ var uploadImg = require('./upload_img');
 var uploadMd = require('./upload_md');
 var login = require('./login');
 var comment = require('./comment');
+var picpages = require('./picpages');
 
 
 module.exports = function(app){
@@ -27,7 +28,8 @@ module.exports = function(app){
 	app.post('/comment', comment);
 	app.post('/edit/org', org.update);
 	app.post('/suggest/update', suggest.update);
-	app.post('/suggest/get', suggest.get);
+	app.post('/picpages/update', picpages.update);
+	
 	
 	/*中间件*/
 	//404

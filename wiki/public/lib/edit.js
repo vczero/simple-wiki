@@ -6,6 +6,6 @@ require.config({
     }
 });
  
-require(['common/left', 'common/header', 'edit/updateOrg', 'edit/updateSuggest', 'admin/login'], function(left, header) {
+require(['common/left', 'common/header', 'edit/updateOrg', 'edit/updateSuggest', 'admin/login', 'edit/updatePicpages'], function(left, header) {
  	header.addSelected(2);
 });

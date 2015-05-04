@@ -26,10 +26,10 @@
 	 	 <% } %>
 	 </div>
 	 <div class="home_photo_list">
-	  	<%for(var i = 1; i < 4; i++){%>
+	  	<%for(var i = 0; i < picpages.length; i++){%>
 	  	<div>
-			<img src="imgs/p2.jpg"/>
-			<p>node活学活用</p>
+			<a href=""><img src="<%=picpages[i].picurl%>"/><a>
+			<p><%=picpages[i].title%></p>
 		</div>
 		<%}%>
 	 </div>
