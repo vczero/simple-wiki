@@ -38,6 +38,11 @@ define(['jquery', 'uploader'], function($, WebUploader){
 
     uploader.on('uploadSuccess', function(file) {
         $('#' + file.id).find('p.state').text('已上传');
+        $('#admin_title').val('');
+    		$('#admin_author').val('');
+    		$('#admin_type').val('');
+    		$('#admin_tags').val('');
+    		$('#admin_introdu').val('');
     });
 
     uploader.on( 'uploadError', function(file) {

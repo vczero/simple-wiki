@@ -7,6 +7,7 @@
 	width:300px;
 	background-color:#FFF;
 	border-right:1px solid #ddd;
+	z-index:5;
 }
 
 .home_left_controller{

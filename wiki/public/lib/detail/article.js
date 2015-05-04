@@ -36,8 +36,8 @@ define(['jquery'], function($){
  					};
  					commentsData.splice(0, 0, showComment);
  					renderTpl(commentsData, commentsDiv);
- 					$('#username').val();
- 					$('#comment').val();
+ 					$('#username').val('');
+ 					$('#comment').val('');
  				}else{
  					alert(data.info);
  				}

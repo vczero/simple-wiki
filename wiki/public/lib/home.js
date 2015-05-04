@@ -6,6 +6,6 @@ require.config({
     }
 });
  
-require(['common/left', 'common/header'], function(left, header) {
+require(['common/left', 'common/header', 'common/util'], function(left, header) {
  	header.addSelected(0);
 });
