@@ -1,0 +1,66 @@
+.edit{
+	width:800px;
+	margin-left:50px;
+	margin-top:60px;
+}
+
+.edit_title{
+	font-size:15px;
+	font-weight:bold;
+	height:25px;
+	line-height:25px;
+	border-left:2px solid #21BAFF;
+	padding-left:5px;
+	margin-bottom:10px;
+	border-bottom:1px solid #ddd;
+}
+
+.edit_text{
+	margin-top:20px;
+	margin-bottom:30px;
+}
+
+.edit_text textarea{
+	border:1px solid #ccc;
+	border-radius:4px;
+	width:580px;
+	height:200px;
+	resize:none;
+	outline:none;
+	padding-left:5px;
+	overflow-y:overlay;
+	font-size:14px;
+	color:#3C510C;
+	word-spacing:2px;
+}
+
+.edit_btn{
+	width:100%;
+}
+
+.edit_btn div{
+	margin-left:510px;
+	width:60px;
+	background-color:#21BAFF;
+	height:28px;
+	line-height:28px;
+	border-radius:3px;
+	text-align:center;
+	color:#fff;
+	cursor:pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

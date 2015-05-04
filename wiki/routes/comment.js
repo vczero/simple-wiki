@@ -1,8 +1,6 @@
-
 var fs = require('fs');
 
-
-//用户发布评论
+//用户发布评论接口
 module.exports = function(req, res){
 	var id = req.param('id');
 	var username = req.param('username');
@@ -25,7 +23,7 @@ module.exports = function(req, res){
 				obj.comments.splice(0, 0, {
 					username: username,
 					comment: comment,
-					time: new Date()
+					time: (new Date()).toLocaleString()
 				});
 				
 				fs.writeFileSync(PATH + decodeURI(id), JSON.stringify(obj));

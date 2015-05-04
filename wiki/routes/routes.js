@@ -1,11 +1,14 @@
 var home = require('./index');
 var detail = require('./detail');
 var admin = require('./admin');
+var edit = require('./edit');
+var org = require('./org');
+var suggest = require('./suggest');
+
 var uploadImg = require('./upload_img');
 var uploadMd = require('./upload_md');
 var login = require('./login');
 var comment = require('./comment');
-
 
 
 module.exports = function(app){
@@ -14,6 +17,7 @@ module.exports = function(app){
 	app.get('/', home);
 	app.get('/detail', detail);
 	app.get('/admin', admin);
+	app.get('/edit', edit);
 	
 	
 	/*服务接口层*/
@@ -21,6 +25,9 @@ module.exports = function(app){
 	app.post('/upload/md', uploadMd);
 	app.post('/user/login', login);
 	app.post('/comment', comment);
+	app.post('/edit/org', org.update);
+	app.post('/suggest/update', suggest.update);
+	app.post('/suggest/get', suggest.get);
 	
 	/*中间件*/
 	//404

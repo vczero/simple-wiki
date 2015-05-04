@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>wiki-编辑</title>
+	<link type="text/css" href="css/common/base.css" rel="stylesheet"/>
+	<link type="text/css" href="css/common/left.css" rel="stylesheet"/>
+	<link type="text/css" href="css/home/container.css" rel="stylesheet"/>
+	<link type="text/css" href="css/admin/login.css" rel="stylesheet"/>
+	</head>
+<body>
+	<!--header-->
+   	<% include ../common/header %>
+   	<!--left-->
+   	<% include ../common/left %>
+   	<section id="home_container" class="home_container_div">
+   		
+   		<%if(!user){%>
+   			<div class="admin_login_left">
+   				<% include ../admin/login %>
+   			</div>
+   		
+   		<%}else{ %>
+   			<link type="text/css" href="css/edit/edit.css" rel="stylesheet"/>
+			<div class="admin_article_main">
+				<% include ./edit %>
+			</div>
+   		<%}%>
+   	</section>
+   	<script data-main="lib/edit" src="js/require.js" defer async="true"></script>
+</body>
+</html>

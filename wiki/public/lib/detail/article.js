@@ -1,7 +1,5 @@
 
-
- define(['jquery'], function($){
- 	//显示文章
+define(['jquery'], function($){
  	var blog = $('#detail_blog');
  	var commentsDiv = $('#comments_div');
  	var id = location.href.split('?id=')[1];
@@ -10,11 +8,13 @@
  	if(id){
  		$.getJSON('/blog/' + id, function(data){
  			if(data[decodeURI(id)]){
+ 				//显示文章
  				blog.append(data[decodeURI(id)]);
  				commentsData = data.comments;
  				if(!data.comments){
  					return;
  				}
+ 				//显示评论
  				renderTpl(commentsData, commentsDiv);
  			}
  		});

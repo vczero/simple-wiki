@@ -4,7 +4,7 @@
 		<img src="imgs/logo.png" class="mcenter"/>
 	</div>
 	<div class="home_left_username">
-		<span class="mcenter">vczero</span>
+		<span class="mcenter"><%=org.orgName%></span>
 	</div>
 	<div class="home_star">
 		<div class="mcenter">
@@ -13,12 +13,11 @@
 		</div>
 	</div>
 	<div class="home_intro">
-		<p>
-			人生难得3万日,青春区区5千天。谁说前端是很low的，有种放学别走，信不信我打你，我有n多大哥。
-		</p>
-		 <p>
-		 	php是世界上最好的语言(我算是怕你们了...)，php自动纳入前端，自豪～
-		 </p>
+		<% for(var i in org.introduction){ %>
+			<p>
+				<%=org.introduction[i]%>
+			</p>
+		<% } %>
 	</div>
 	<div class="home_left_starlink">
 		<div class="mcenter">
@@ -27,10 +26,10 @@
 	</div>
 	<div class="home_fllow_star">
 		<div class="mcenter">
-			<span>28</span>
-			<span>740</span><br />
-			<span class="home_star_top">关注</span>
-			<span class="home_star_top">粉丝</span>
+			<span><%=org.starred%></span>
+			<span><%=org.fllowers%></span><br />
+			<span class="home_star_top">starred</span>
+			<span class="home_star_top">fllowers</span>
 		</div>
 	</div>
 	<div class="home_fllow_count">

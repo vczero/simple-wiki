@@ -2,7 +2,7 @@
 var fs = require('fs');
 
 
-//只提供管理员登录
+//只提供管理员登录服务接口
 module.exports = function(req, res){
 	var username = req.param('username');
 	var password = req.param('password');
