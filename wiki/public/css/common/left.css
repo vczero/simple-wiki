@@ -10,7 +10,7 @@
 }
 
 .home_left_controller{
-	position:absolute;
+	position:fixed;
 	left:356px;
 	height:55px;
 	background-color:#0000FF;

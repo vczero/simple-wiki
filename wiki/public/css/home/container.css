@@ -5,13 +5,13 @@
 	bottom:0;
 	right:0;
 	background-color:#FFF;
-	overflow-y:overlay;
+	overflow-y:visible;
 }
 
 .home_pages_list{
 	 width:750px;
 	 min-height:100px;
-	 overflow-y:overlay;
+	 overflow-y:visible;
 	 margin-left:50px; 
 }
 

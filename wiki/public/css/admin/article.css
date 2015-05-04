@@ -20,7 +20,7 @@
 }
 
 .admin_f_left{
-	overflow-y:overlay;
+	overflow-y:visible;
 	width:700px;
 	border:1px solid #ccc;
 	border-left:2px solid #0DAFFF;

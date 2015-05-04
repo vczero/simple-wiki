@@ -57,7 +57,7 @@
 }
 .detail_comment_submit{
 	  width:100%;
-	  overflow-y:overlay;
+	  overflow-y:visible;
 }
 
 .detail_comment_submit div{
@@ -111,6 +111,11 @@ pre{
 	padding: 10px;
 	border-radius:4px;
 	background-color:#F7F7F7;
+}
+
+
+#comments_div{
+	margin-top:50px;
 }
 
 

@@ -23,7 +23,9 @@
 
 .loginDiv{
 	width:200px;
-	overflow-y:overlay;
+	overflow-y:visible;
+	height: 40px;
+	
 }
 
 .loginDiv div{
