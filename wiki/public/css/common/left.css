@@ -205,6 +205,14 @@
 }
 
 
+.home_article_list a{
+	color:#000;
+}
+
+.home_article_list a:visited{
+	color:#000;
+}
+
 
 
 

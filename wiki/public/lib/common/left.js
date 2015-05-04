@@ -24,4 +24,17 @@ define(['jquery'], function($){
 			right && right.animate({width: 'toggle'}, TIME);
 		}
 	);
+	
+	
+	//Tpl Render
+	 function tplRender(data){
+	 	for(var i in data){
+	 		var str = '<li><i></i><span>';
+	 		str += data[i];
+	 		str += '</span></li>';
+	 	}
+	 }
+	 
+	 
+	
 });

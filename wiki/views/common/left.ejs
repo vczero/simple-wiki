@@ -42,26 +42,15 @@
 		<div>
 			<span>我的文章</span>
 			<ul>
-				<li>
-					<i></i>
-					<span>node.js编程123</span>
-				</li>
-				<li>
-					<i></i>
-					<span>js Framework</span>
-				</li>
-				<li>
-					<i></i>
-					<span>php是世界上最好的语言</span>
-				</li>
-				<li>
-					<i></i>
-					<span>有种放学别走</span>
-				</li>
-				<li>
-					<i></i>
-					<span>有种放学别走</span>
-				</li>
+				<% for(var i in sugPages){ %>
+					<% var title = sugPages[i].title.length > 27 ? sugPages[i].title.substring(0, 27): sugPages[i].title%>
+					<li>
+						<i></i>
+						<a href="http://localhost:3000/detail?id=<%=sugPages[i].id%>">
+							<span><%=title%></span>
+						</a>
+					</li>
+				<% } %>
 			</ul>
 		</div>
 	</div>
