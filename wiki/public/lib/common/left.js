@@ -25,16 +25,4 @@ define(['jquery'], function($){
 		}
 	);
 	
-	
-	//Tpl Render
-	 function tplRender(data){
-	 	for(var i in data){
-	 		var str = '<li><i></i><span>';
-	 		str += data[i];
-	 		str += '</span></li>';
-	 	}
-	 }
-	 
-	 
-	
 });

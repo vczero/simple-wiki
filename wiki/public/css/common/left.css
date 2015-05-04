@@ -151,8 +151,12 @@
 }
 .home_left_starlink div{
 	width:55px;
-	height:24px;
-	background-image:url(../../imgs/dou.png);
+	height:26px;
+}
+
+.home_left_starlink a img{
+	width:22px;
+	height:22px;
 }
 
 .home_fllow_count{

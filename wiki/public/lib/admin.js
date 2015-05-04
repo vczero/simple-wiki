@@ -8,5 +8,5 @@ require.config({
  
 require(['common/left', 'common/header', 'admin/upload_img', 'admin/upload_md',
 		'admin/login'], function(left, header, WebUploader, $) {
- 	header.addSelected(0);
+ 	header.addSelected(1);
 });

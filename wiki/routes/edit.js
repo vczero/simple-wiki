@@ -1,7 +1,7 @@
 var fs = require('fs');
 var org = require('./org');
 var suggest = require('./suggest');
-
+var count = require('./count');
 
 module.exports = function(req, res){
 	var data = fs.readFileSync('./suggest.json');
@@ -11,6 +11,7 @@ module.exports = function(req, res){
 		org: org.get(), 
 		suggest: suggestObj, 
 		user: req.session.user,
-		sugPages: suggest.get()
+		sugPages: suggest.get(),
+		count: count.articles()
 	});
 };
