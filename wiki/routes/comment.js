@@ -1,4 +1,5 @@
 var fs = require('fs');
+var time = require('../util/time');
 
 //用户发布评论接口
 module.exports = function(req, res){
@@ -23,7 +24,7 @@ module.exports = function(req, res){
 				obj.comments.splice(0, 0, {
 					username: username,
 					comment: comment,
-					time: (new Date()).toLocaleString()
+					time: time((new Date()).toString())
 				});
 				
 				fs.writeFileSync(PATH + decodeURI(id), JSON.stringify(obj));

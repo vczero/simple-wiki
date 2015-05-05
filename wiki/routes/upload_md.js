@@ -1,6 +1,7 @@
 var fs = require('fs');
 var formidable = require('formidable');
 var markdown = require('markdown').markdown;
+var time = require('../util/time');
 
 module.exports = function(req, res, next){
 	var form = new formidable.IncomingForm();
@@ -26,7 +27,7 @@ module.exports = function(req, res, next){
 					//增加main.json文件简介
 					var introObj = {
 						author: fields.author,
-						time: (new Date()).toString(),
+						time: time((new Date()).toString()),
 						title: fields.title,
 						type: fields.articleType,
 						tags: fields.tags,

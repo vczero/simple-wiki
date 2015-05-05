@@ -32,7 +32,7 @@ define(['jquery'], function($){
  					var showComment = {
  						username: username,
  						comment: comment,
- 						time: (new Date()).toLocaleString()
+ 						time: time((new Date()).toString())
  					};
  					commentsData.splice(0, 0, showComment);
  					renderTpl(commentsData, commentsDiv);
@@ -66,5 +66,18 @@ define(['jquery'], function($){
  		parentDiv.append($(frag));
  	}
  	
+ 	
+ 	function time(dateString){
+		var date = new Date(dateString);
+		var str = date.getFullYear() + '-';
+			str += (date.getMonth() + 1) + '-';
+			str += date.getDate() + ' ';
+			str += date.getHours() + ':';
+			str += date.getMinutes() + ':';
+			str += date.getSeconds();
+			
+		return str;
+	};
+
  });
 
