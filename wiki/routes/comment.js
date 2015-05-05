@@ -1,5 +1,6 @@
 var fs = require('fs');
 var time = require('../util/time');
+var xss = require('xss');
 
 //用户发布评论接口
 module.exports = function(req, res){
@@ -22,8 +23,8 @@ module.exports = function(req, res){
 					}
 				}
 				obj.comments.splice(0, 0, {
-					username: username,
-					comment: comment,
+					username: xss(username),
+					comment: xss(comment),
 					time: time((new Date()).toString())
 				});
 				
